@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $black !important;
+}
+
+.bg-nav {
+    background: rgba($color: #000000, $alpha: .5);
+}
+
+.banner {
+    height: 100vh;
+    position: relative;
+    background: $black;
+    .navbar-brand {
+        font-family: 'Trade Winds', cursive;
+        span {
+            color: red;
+        }
+    }
+    .btn {
+        border-radius: 0;
+    }
+    .movies {
+        height: 100vh;
+        position: relative;
+        background: $black;
+        color: #fff;
+        .movie {
+            height: 100vh;
+            position: relative;
+            background: $black;
+            @media (max-width: 767px) {
+                padding-top: 100px;
+            }
+            .movie__bg {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-size: cover;
+                filter: blur(2px);
+            }
+        }
+    }
+}
+
+.listing {
+    img {
+        width: 100%;
+    }
+    .movie {
+        position: relative;
+        background: $black;
+        &:hover img {
+            opacity: .6;
+        }
+        &:hover .movie__details {
+            opacity: 1;
+        }
+        .movie__details {
+            opacity: 0;
+            position: absolute;
+            left: 25px;
+            right: 25px;
+            bottom: 34px;
+            .movie__fav:hover {
+                font-weight: 900;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:767px) {
+    .movies {
+        .movie {
+            padding: 20px 0;
+        }
+    }
+}
